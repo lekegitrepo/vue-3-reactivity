@@ -48,6 +48,9 @@ let total = 0;
 let effect = () => {
   total = product.price * product.quantity;
 };
-
-track(product, 'quantity');
 effect();
+
+console.log('before updated quantity total = ' + total);
+product.quantity = 3;
+console.log('after updated quantity total = ' + total);
+console.log('Updated quantity to = ' + product.quantity);
